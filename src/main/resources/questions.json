@@ -1,0 +1,162 @@
+[
+  {
+    "question": "Capital de Moçambique?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Maputo", "correct": true},
+      {"text": "Beira", "correct": false},
+      {"text": "Nampula", "correct": false},
+      {"text": "Tete", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual é a moeda oficial de Moçambique?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Metical", "correct": true},
+      {"text": "Rand", "correct": false},
+      {"text": "Dólar Moçambicano", "correct": false},
+      {"text": "Euro", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual destas cores NÃO faz parte da bandeira de Moçambique?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Verde", "correct": false},
+      {"text": "Preto", "correct": false},
+      {"text": "Azul", "correct": true},
+      {"text": "Amarelo", "correct": false}
+    ]
+  },
+  {
+    "question": "Moçambique é banhado por qual oceano?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Oceano Atlântico", "correct": false},
+      {"text": "Oceano Índico", "correct": true},
+      {"text": "Oceano Pacífico", "correct": false},
+      {"text": "Mar Mediterrâneo", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual é a língua oficial de Moçambique?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Inglês", "correct": false},
+      {"text": "Português", "correct": true},
+      {"text": "Changana", "correct": false},
+      {"text": "Suaíli", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual é o nome do maior rio que atravessa o país e desagua no Índico?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Rio Zambeze", "correct": true},
+      {"text": "Rio Limpopo", "correct": false},
+      {"text": "Rio Save", "correct": false},
+      {"text": "Rio Rovuma", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual cidade moçambicana é historicamente apelidada de 'Cidade das Acácias'?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Beira", "correct": false},
+      {"text": "Maputo", "correct": true},
+      {"text": "Nampula", "correct": false},
+      {"text": "Pemba", "correct": false}
+    ]
+  },
+  {
+    "question": "Em qual província se localiza a Ilha de Moçambique?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Cabo Delgado", "correct": false},
+      {"text": "Nampula", "correct": true},
+      {"text": "Inhambane", "correct": false},
+      {"text": "Zambézia", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual é o nome do parque nacional famoso pela sua biodiversidade e pelo 'Projeto de Restauração'?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Parque Nacional da Gorongosa", "correct": true},
+      {"text": "Parque Nacional do Limpopo", "correct": false},
+      {"text": "Parque Nacional de Banhine", "correct": false},
+      {"text": "Parque Nacional do Bazaruto", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual infraestrutura moderna liga a capital Maputo à Katembe desde 2018?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Túnel do Maputo", "correct": false},
+      {"text": "Ponte Maputo-Katembe", "correct": true},
+      {"text": "Ponte da Unidade", "correct": false},
+      {"text": "Viaduto de Alcântara", "correct": false}
+    ]
+  },
+  {
+    "question": "Moçambique faz fronteira a norte com qual destes países?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "África do Sul", "correct": false},
+      {"text": "Zimbabué", "correct": false},
+      {"text": "Tanzânia", "correct": true},
+      {"text": "Namíbia", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual é o ponto mais alto de Moçambique?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "Monte Namúli", "correct": false},
+      {"text": "Monte Binga", "correct": true},
+      {"text": "Monte Mabu", "correct": false},
+      {"text": "Monte Gorongosa", "correct": false}
+    ]
+  },
+  {
+    "question": "Em que ano Moçambique foi admitido como membro da Commonwealth?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "1975", "correct": false},
+      {"text": "1995", "correct": true},
+      {"text": "2010", "correct": false},
+      {"text": "1984", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual província é o epicentro da exploração de Gás Natural Liquefeito (GNL)?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "Cabo Delgado", "correct": true},
+      {"text": "Tete", "correct": false},
+      {"text": "Gaza", "correct": false},
+      {"text": "Niassa", "correct": false}
+    ]
+  },
+  {
+    "question": "Em que década o estilo musical Marrabenta começou a ganhar popularidade?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "Anos 30", "correct": false},
+      {"text": "Anos 40", "correct": true},
+      {"text": "Anos 60", "correct": false},
+      {"text": "Anos 80", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual é a maior província de Moçambique em termos de área territorial?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "Nampula", "correct": false},
+      {"text": "Niassa", "correct": true},
+      {"text": "Tete", "correct": false},
+      {"text": "Inhambane", "correct": false}
+    ]
+  }
+]
