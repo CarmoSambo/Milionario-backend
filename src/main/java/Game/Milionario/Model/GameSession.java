@@ -30,4 +30,10 @@ public class GameSession {
     private LocalDateTime questionStartTime;
     private boolean usedAskAudience;
     private boolean usedPhoneFriend;
+
+    private Long currentQuestionId;
+
+    // IDs das 15 perguntas do jogo, pré-seleccionadas e embaralhadas no início (separadas por vírgula)
+    @Column(length = 1000)
+    private String questionIds;
 }

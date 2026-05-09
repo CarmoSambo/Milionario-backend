@@ -31,6 +31,16 @@ public class GameController {
         return gameService.startGame();
     }
 
+    @GetMapping("/{gameId}")
+    public ResponseEntity<GameSession> getGameSession(@PathVariable Long gameId) {
+        try {
+            GameSession game = gameService.getGameSession(gameId);
+            return ResponseEntity.ok(game);
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
     @GetMapping("/{gameId}/question")
     public QuestionDto getNextQuestion(@PathVariable Long gameId){
         return gameService.getNextQuestion(gameId);

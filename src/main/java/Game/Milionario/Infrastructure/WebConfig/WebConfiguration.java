@@ -1,19 +1,5 @@
 package Game.Milionario.Infrastructure.WebConfig;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-@Configuration
-public class WebConfiguration implements WebMvcConfigurer {
-    @Override
-
-    public void addCorsMappings(CorsRegistry registry){
-        registry.addMapping("/**")
-                .allowedOrigins(
-                        "http:/localhost:5173"
-                )
-                .allowedMethods("GET","POST","PUT","DELETE")
-                .allowedHeaders("*");
-    }
-}
+// CORRIGIDO: ficheiro desactivado. Duplicava o CorsConfig.java e tinha um typo
+// crítico ("http:/localhost:3000" com uma barra a menos) que impedia o CORS de
+// funcionar correctamente. A configuração CORS está centralizada em CorsConfig.java.

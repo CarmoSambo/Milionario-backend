@@ -25,6 +25,10 @@ public class QuestionDto {
         this.question = question;
     }
 
+    public List<AnswerDto> getAnswers() {
+        return answers;
+    }
+
     public void setAnswers(List<AnswerDto> answers) {
         this.answers = answers;
     }

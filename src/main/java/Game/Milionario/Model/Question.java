@@ -16,17 +16,13 @@ public class Question {
 
     private String question;
 
-    private String optionA;
-    private String optionB;
-    private String optionC;
-    private String optionD;
+    // CORRIGIDO: removidos os campos optionA/B/C/D e correctAnswer que nunca foram
+    // utilizados. As respostas estão na tabela Answer com o campo "correct" próprio.
 
-    private String correctAnswer;
     @Enumerated(EnumType.STRING)
     private DifficultyLevel difficulty;
 
-    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
-    @JsonManagedReference // Gerencia a referência para evitar loop
+    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
     private List<Answer> answers;
-
 }

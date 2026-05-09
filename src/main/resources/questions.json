@@ -1,42 +1,12 @@
 [
   {
-    "question": "Capital de Moçambique?",
+    "question": "Qual país ganhou a Copa do Mundo FIFA 2022?",
     "difficulty": "EASY",
     "answers": [
-      {"text": "Maputo", "correct": true},
-      {"text": "Beira", "correct": false},
-      {"text": "Nampula", "correct": false},
-      {"text": "Tete", "correct": false}
-    ]
-  },
-  {
-    "question": "Qual é a moeda oficial de Moçambique?",
-    "difficulty": "EASY",
-    "answers": [
-      {"text": "Metical", "correct": true},
-      {"text": "Rand", "correct": false},
-      {"text": "Dólar Moçambicano", "correct": false},
-      {"text": "Euro", "correct": false}
-    ]
-  },
-  {
-    "question": "Qual destas cores NÃO faz parte da bandeira de Moçambique?",
-    "difficulty": "EASY",
-    "answers": [
-      {"text": "Verde", "correct": false},
-      {"text": "Preto", "correct": false},
-      {"text": "Azul", "correct": true},
-      {"text": "Amarelo", "correct": false}
-    ]
-  },
-  {
-    "question": "Moçambique é banhado por qual oceano?",
-    "difficulty": "EASY",
-    "answers": [
-      {"text": "Oceano Atlântico", "correct": false},
-      {"text": "Oceano Índico", "correct": true},
-      {"text": "Oceano Pacífico", "correct": false},
-      {"text": "Mar Mediterrâneo", "correct": false}
+      {"text": "Argentina", "correct": true},
+      {"text": "França", "correct": false},
+      {"text": "Brasil", "correct": false},
+      {"text": "Croácia", "correct": false}
     ]
   },
   {
@@ -50,6 +20,56 @@
     ]
   },
   {
+    "question": "Qual plataforma de streaming lançou a série sul-coreana 'Squid Game' em 2021?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Netflix", "correct": true},
+      {"text": "Disney+", "correct": false},
+      {"text": "HBO Max", "correct": false},
+      {"text": "Amazon Prime", "correct": false}
+    ]
+  },
+  {
+    "question": "Que doença causou uma pandemia global declarada pela OMS em março de 2020?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "COVID-19", "correct": true},
+      {"text": "Ébola", "correct": false},
+      {"text": "Gripe Suína", "correct": false},
+      {"text": "SARS", "correct": false}
+    ]
+  },
+  {
+    "question": "Capital de Moçambique?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Maputo", "correct": true},
+      {"text": "Beira", "correct": false},
+      {"text": "Nampula", "correct": false},
+      {"text": "Tete", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual destas cores NÃO faz parte da bandeira de Moçambique?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Verde", "correct": false},
+      {"text": "Preto", "correct": false},
+      {"text": "Azul", "correct": true},
+      {"text": "Amarelo", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual país sediou a Copa do Mundo FIFA 2022?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Qatar", "correct": true},
+      {"text": "Rússia", "correct": false},
+      {"text": "Emirados Árabes", "correct": false},
+      {"text": "Arábia Saudita", "correct": false}
+    ]
+  },
+  {
     "question": "Qual é o nome do maior rio que atravessa o país e desagua no Índico?",
     "difficulty": "EASY",
     "answers": [
@@ -57,6 +77,96 @@
       {"text": "Rio Limpopo", "correct": false},
       {"text": "Rio Save", "correct": false},
       {"text": "Rio Rovuma", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual chatbot de inteligência artificial foi lançado pela OpenAI em novembro de 2022?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "ChatGPT", "correct": true},
+      {"text": "Gemini", "correct": false},
+      {"text": "Copilot", "correct": false},
+      {"text": "Alexa", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual é a moeda oficial de Moçambique?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Metical", "correct": true},
+      {"text": "Rand", "correct": false},
+      {"text": "Dólar Moçambicano", "correct": false},
+      {"text": "Euro", "correct": false}
+    ]
+  },
+  {
+    "question": "Em qual cidade foram realizados os Jogos Olímpicos de Verão de 2020?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Tóquio", "correct": true},
+      {"text": "Pequim", "correct": false},
+      {"text": "Paris", "correct": false},
+      {"text": "Los Angeles", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual seleção ganhou o UEFA Euro 2020, disputado em 2021?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Itália", "correct": true},
+      {"text": "Inglaterra", "correct": false},
+      {"text": "Espanha", "correct": false},
+      {"text": "Bélgica", "correct": false}
+    ]
+  },
+  {
+    "question": "Moçambique é banhado por qual oceano?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Oceano Atlântico", "correct": false},
+      {"text": "Oceano Índico", "correct": true},
+      {"text": "Oceano Pacífico", "correct": false},
+      {"text": "Mar Mediterrâneo", "correct": false}
+    ]
+  },
+  {
+    "question": "Quem se tornou Presidente dos Estados Unidos em janeiro de 2021?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "Joe Biden", "correct": true},
+      {"text": "Donald Trump", "correct": false},
+      {"text": "Barack Obama", "correct": false},
+      {"text": "Bernie Sanders", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual empresa é responsável pelo foguete Starship, que realizou voos de teste em 2023?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "SpaceX", "correct": true},
+      {"text": "NASA", "correct": false},
+      {"text": "Blue Origin", "correct": false},
+      {"text": "Boeing", "correct": false}
+    ]
+  },
+  {
+    "question": "Em que ano faleceu a Rainha Isabel II do Reino Unido?",
+    "difficulty": "EASY",
+    "answers": [
+      {"text": "2022", "correct": true},
+      {"text": "2021", "correct": false},
+      {"text": "2023", "correct": false},
+      {"text": "2020", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual país invadiu militarmente a Ucrânia em fevereiro de 2022?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Rússia", "correct": true},
+      {"text": "Bielorrússia", "correct": false},
+      {"text": "China", "correct": false},
+      {"text": "Cazaquistão", "correct": false}
     ]
   },
   {
@@ -70,13 +180,13 @@
     ]
   },
   {
-    "question": "Em qual província se localiza a Ilha de Moçambique?",
+    "question": "Como se chama o rover da NASA que pousou em Marte em fevereiro de 2021?",
     "difficulty": "MEDIUM",
     "answers": [
-      {"text": "Cabo Delgado", "correct": false},
-      {"text": "Nampula", "correct": true},
-      {"text": "Inhambane", "correct": false},
-      {"text": "Zambézia", "correct": false}
+      {"text": "Perseverance", "correct": true},
+      {"text": "Curiosity", "correct": false},
+      {"text": "Opportunity", "correct": false},
+      {"text": "Spirit", "correct": false}
     ]
   },
   {
@@ -90,13 +200,13 @@
     ]
   },
   {
-    "question": "Qual infraestrutura moderna liga a capital Maputo à Katembe desde 2018?",
+    "question": "Qual rede social foi adquirida por Elon Musk em outubro de 2022 por cerca de 44 mil milhões de dólares?",
     "difficulty": "MEDIUM",
     "answers": [
-      {"text": "Túnel do Maputo", "correct": false},
-      {"text": "Ponte Maputo-Katembe", "correct": true},
-      {"text": "Ponte da Unidade", "correct": false},
-      {"text": "Viaduto de Alcântara", "correct": false}
+      {"text": "Twitter", "correct": true},
+      {"text": "Facebook", "correct": false},
+      {"text": "Instagram", "correct": false},
+      {"text": "TikTok", "correct": false}
     ]
   },
   {
@@ -110,6 +220,106 @@
     ]
   },
   {
+    "question": "Em que cidade do Reino Unido foi realizada a conferência climática COP26 em novembro de 2021?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Glasgow", "correct": true},
+      {"text": "Londres", "correct": false},
+      {"text": "Manchester", "correct": false},
+      {"text": "Edimburgo", "correct": false}
+    ]
+  },
+  {
+    "question": "Em qual província se localiza a Ilha de Moçambique?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Cabo Delgado", "correct": false},
+      {"text": "Nampula", "correct": true},
+      {"text": "Inhambane", "correct": false},
+      {"text": "Zambézia", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual país ganhou o Campeonato do Mundo de Rugby de 2023, realizado em França?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "África do Sul", "correct": true},
+      {"text": "Nova Zelândia", "correct": false},
+      {"text": "França", "correct": false},
+      {"text": "Inglaterra", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual infraestrutura moderna liga a capital Maputo à Katembe desde 2018?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Túnel do Maputo", "correct": false},
+      {"text": "Ponte Maputo-Katembe", "correct": true},
+      {"text": "Ponte da Unidade", "correct": false},
+      {"text": "Viaduto de Alcântara", "correct": false}
+    ]
+  },
+  {
+    "question": "Quem se tornou Primeiro-Ministro do Reino Unido em outubro de 2022, sendo o primeiro de ascendência sul-asiática?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Rishi Sunak", "correct": true},
+      {"text": "Boris Johnson", "correct": false},
+      {"text": "Liz Truss", "correct": false},
+      {"text": "Keir Starmer", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual variante do coronavírus foi classificada pela OMS como 'variante de preocupação' em novembro de 2021?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Ómicron", "correct": true},
+      {"text": "Delta", "correct": false},
+      {"text": "Beta", "correct": false},
+      {"text": "Gama", "correct": false}
+    ]
+  },
+  {
+    "question": "Quem venceu as eleições presidenciais do Brasil em outubro de 2022?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Luiz Inácio Lula da Silva", "correct": true},
+      {"text": "Jair Bolsonaro", "correct": false},
+      {"text": "Ciro Gomes", "correct": false},
+      {"text": "Simone Tebet", "correct": false}
+    ]
+  },
+  {
+    "question": "Em que país ocorreu um terramoto devastador em fevereiro de 2023, causando mais de 50.000 mortes?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Turquia", "correct": true},
+      {"text": "Síria", "correct": false},
+      {"text": "Irão", "correct": false},
+      {"text": "Afeganistão", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual modelo de inteligência artificial foi lançado pelo Google em dezembro de 2023 como resposta ao ChatGPT?",
+    "difficulty": "MEDIUM",
+    "answers": [
+      {"text": "Gemini", "correct": true},
+      {"text": "Bard", "correct": false},
+      {"text": "LaMDA", "correct": false},
+      {"text": "Copilot", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual foi o primeiro país do mundo a aprovar uma vacina contra a COVID-19 para uso geral, em dezembro de 2020?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "Reino Unido", "correct": true},
+      {"text": "Estados Unidos", "correct": false},
+      {"text": "Rússia", "correct": false},
+      {"text": "China", "correct": false}
+    ]
+  },
+  {
     "question": "Qual é o ponto mais alto de Moçambique?",
     "difficulty": "HARD",
     "answers": [
@@ -120,23 +330,13 @@
     ]
   },
   {
-    "question": "Em que ano Moçambique foi admitido como membro da Commonwealth?",
+    "question": "Qual navio de carga bloqueou o Canal de Suez durante seis dias em março de 2021?",
     "difficulty": "HARD",
     "answers": [
-      {"text": "1975", "correct": false},
-      {"text": "1995", "correct": true},
-      {"text": "2010", "correct": false},
-      {"text": "1984", "correct": false}
-    ]
-  },
-  {
-    "question": "Qual província é o epicentro da exploração de Gás Natural Liquefeito (GNL)?",
-    "difficulty": "HARD",
-    "answers": [
-      {"text": "Cabo Delgado", "correct": true},
-      {"text": "Tete", "correct": false},
-      {"text": "Gaza", "correct": false},
-      {"text": "Niassa", "correct": false}
+      {"text": "Ever Given", "correct": true},
+      {"text": "MSC Oscar", "correct": false},
+      {"text": "CSCL Globe", "correct": false},
+      {"text": "Maersk Triple E", "correct": false}
     ]
   },
   {
@@ -150,6 +350,36 @@
     ]
   },
   {
+    "question": "Em 2021, qual país da América Central foi o primeiro do mundo a adoptar o Bitcoin como moeda de curso legal?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "El Salvador", "correct": true},
+      {"text": "Guatemala", "correct": false},
+      {"text": "Honduras", "correct": false},
+      {"text": "Costa Rica", "correct": false}
+    ]
+  },
+  {
+    "question": "Em que ano Moçambique foi admitido como membro da Commonwealth?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "1975", "correct": false},
+      {"text": "1995", "correct": true},
+      {"text": "2010", "correct": false},
+      {"text": "1984", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual foi o nome da missão da NASA que, em 2022, testou pela primeira vez o desvio de um asteroide por impacto cinético?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "DART", "correct": true},
+      {"text": "OSIRIS-REx", "correct": false},
+      {"text": "Artemis", "correct": false},
+      {"text": "Voyager", "correct": false}
+    ]
+  },
+  {
     "question": "Qual é a maior província de Moçambique em termos de área territorial?",
     "difficulty": "HARD",
     "answers": [
@@ -157,6 +387,76 @@
       {"text": "Niassa", "correct": true},
       {"text": "Tete", "correct": false},
       {"text": "Inhambane", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual escritora francesa ganhou o Prémio Nobel de Literatura em 2022, conhecida pelas suas obras autobiográficas?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "Annie Ernaux", "correct": true},
+      {"text": "Virginie Despentes", "correct": false},
+      {"text": "Leïla Slimani", "correct": false},
+      {"text": "Marie NDiaye", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual província é o epicentro da exploração de Gás Natural Liquefeito (GNL)?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "Cabo Delgado", "correct": true},
+      {"text": "Tete", "correct": false},
+      {"text": "Gaza", "correct": false},
+      {"text": "Niassa", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual empresa foi a primeira a transportar astronautas à Estação Espacial Internacional num veículo comercial tripulado, em 2020?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "SpaceX", "correct": true},
+      {"text": "Boeing", "correct": false},
+      {"text": "Blue Origin", "correct": false},
+      {"text": "Virgin Galactic", "correct": false}
+    ]
+  },
+  {
+    "question": "Em que ano o Reino Unido saiu formalmente da União Europeia, consumando o Brexit?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "2020", "correct": true},
+      {"text": "2019", "correct": false},
+      {"text": "2021", "correct": false},
+      {"text": "2018", "correct": false}
+    ]
+  },
+  {
+    "question": "Qual modelo de linguagem da Meta AI, lançado em 2023, se tornou popular por ser de código aberto?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "LLaMA", "correct": true},
+      {"text": "Grok", "correct": false},
+      {"text": "Falcon", "correct": false},
+      {"text": "Mistral", "correct": false}
+    ]
+  },
+  {
+    "question": "Em julho de 2023, qual país da África Ocidental sofreu um golpe de Estado que derrubou o presidente Mohamed Bazoum?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "Níger", "correct": true},
+      {"text": "Mali", "correct": false},
+      {"text": "Burkina Faso", "correct": false},
+      {"text": "Chade", "correct": false}
+    ]
+  },
+  {
+    "question": "Em que ano os Talibãs retomaram o controlo de Cabul, capital do Afeganistão, após a retirada das tropas americanas?",
+    "difficulty": "HARD",
+    "answers": [
+      {"text": "2021", "correct": true},
+      {"text": "2020", "correct": false},
+      {"text": "2022", "correct": false},
+      {"text": "2019", "correct": false}
     ]
   }
 ]

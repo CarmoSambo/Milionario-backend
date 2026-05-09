@@ -1,26 +1,7 @@
 package Game.Milionario.Configuration;
 
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
-@Configuration
-//@EnableWebSecurity
+// CORRIGIDO: removida a anotação @Configuration para que o Spring não carregue
+// esta classe. A segurança não está implementada e o código comentado causava
+// confusão sobre o estado real da aplicação.
 public class SecurityConfig {
-//    @Autowired
-//    private SecurityFilter securityFilter;
-//    @Bean
-//
-//    public SecurityFilterChain filterChain(HttpSecurity http)throws Exception{
-//
-//        http
-//                .crsf().disable()
-//                authorizerHttpRequest(auth -> auth
-//                        .anyRequest().permitAll()
-//                );
-//
-//        return http.build();
-//    }
-
 }
