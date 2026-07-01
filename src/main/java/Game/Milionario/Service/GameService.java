@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 import Game.Milionario.Model.Answer;
-import Game.Milionario.Model.Score;
 import Game.Milionario.Dto.QuestionDto;
 import Game.Milionario.Dto.AnswerDto;
 import Game.Milionario.Enums.GameStatus;
@@ -16,15 +15,16 @@ import Game.Milionario.Model.Question;
 import Game.Milionario.Repository.GameRepository;
 import Game.Milionario.Repository.QuestionRepository;
 import Game.Milionario.Repository.ScoreRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import Game.Milionario.Enums.DifficultyLevel;
 
+@Slf4j
 @Service
 @Transactional
 public class GameService {
 
-    // Tempo limite por pergunta em segundos
     private static final int QUESTION_TIME_LIMIT_SECONDS = 30;
 
     private final GameRepository gameRepo;
@@ -37,7 +37,6 @@ public class GameService {
         this.scoreRepo = scoreRepo;
     }
 
-    // Inicia um novo jogo
     public GameSession startGame() {
         GameSession game = new GameSession();
         game.setCurrentQuestionIndex(0);
@@ -52,11 +51,15 @@ public class GameService {
         game.setQuestionIds(selectRandomQuestionIds());
 
         GameSession savedGame = gameRepo.save(game);
-        System.out.println("Jogo iniciado com ID: " + savedGame.getId());
+        log.info("Jogo iniciado com ID: {}", savedGame.getId());
         return savedGame;
     }
 
-    // Devolve a próxima pergunta e inicia o timer de 30 segundos
+    @Transactional(readOnly = true)
+    public GameSession getGameSession(Long gameId) {
+        return getGame(gameId);
+    }
+
     public QuestionDto getNextQuestion(Long gameId) {
         GameSession game = getGame(gameId);
         checkGameStatus(game);
@@ -75,28 +78,20 @@ public class GameService {
         game.setQuestionStartTime(LocalDateTime.now());
         gameRepo.save(game);
 
-        System.out.println("Pergunta enviada: [" + question.getId() + "] " + question.getQuestion());
+        log.info("Pergunta enviada: [{}] {}", question.getId(), question.getQuestion());
         return toDTO(question, game);
     }
 
-    // Valida a resposta do jogador
     public boolean answerQuestion(Long gameId, Long answerId) {
         GameSession game = getGame(gameId);
         checkGameStatus(game);
 
-        // CORRIGIDO: o timer agora termina o jogo correctamente (status LOST).
-        // Antes, finishGame(game) sem parâmetro não actualizava o status,
-        // por isso o jogo continuava a aceitar perguntas mesmo após timeout.
         if (game.getQuestionStartTime() == null ||
                 LocalDateTime.now().isAfter(game.getQuestionStartTime().plusSeconds(QUESTION_TIME_LIMIT_SECONDS))) {
             finishGame(game, false);
             return false;
         }
 
-        // CORRIGIDO: carrega a pergunta pelo ID guardado em getNextQuestion(),
-        // eliminando o problema do shuffle que gerava uma pergunta diferente aqui.
-        // Antes, getQuestionsByLevel() era chamado novamente e o shuffle produzia
-        // uma lista em ordem diferente, por isso o answerId nunca coincidia.
         Question current = questionRepo.findById(game.getCurrentQuestionId())
                 .orElseThrow(() -> new RuntimeException("Pergunta não encontrada. Chame /question primeiro."));
 
@@ -114,7 +109,6 @@ public class GameService {
         }
     }
 
-    // Ajuda 50/50: remove duas respostas erradas
     public List<AnswerDto> useFiftyFifty(Long gameId) {
         GameSession game = getGame(gameId);
         checkGameStatus(game);
@@ -139,7 +133,6 @@ public class GameService {
         return result;
     }
 
-    // Ajuda Saltar: avança para a próxima pergunta sem responder
     public void skipQuestion(Long gameId) {
         GameSession game = getGame(gameId);
         checkGameStatus(game);
@@ -152,7 +145,6 @@ public class GameService {
         nextQuestion(game);
     }
 
-    // Ajuda Pergunta ao Público: simula votação da audiência
     public Map<Long, Integer> useAskAudience(Long gameId) {
         GameSession game = getGame(gameId);
         checkGameStatus(game);
@@ -167,11 +159,9 @@ public class GameService {
         Map<Long, Integer> votes = new HashMap<>();
         Answer correct = answers.stream().filter(Answer::isCorrect).findFirst().orElseThrow();
 
-        // Resposta certa recebe entre 60% e 80% dos votos
         int correctVotes = 60 + (int) (Math.random() * 21);
         votes.put(correct.getId(), correctVotes);
 
-        // Restante dividido pelas respostas erradas
         List<Answer> incorrect = answers.stream().filter(a -> !a.isCorrect()).toList();
         int votesPerIncorrect = (100 - correctVotes) / incorrect.size();
         incorrect.forEach(a -> votes.put(a.getId(), votesPerIncorrect));
@@ -182,7 +172,6 @@ public class GameService {
         return votes;
     }
 
-    // Ajuda Ligar a um Amigo: 70% de chance de sugerir a resposta certa
     public Long usePhoneFriend(Long gameId) {
         GameSession game = getGame(gameId);
         checkGameStatus(game);
@@ -207,19 +196,6 @@ public class GameService {
         return suggestedId;
     }
 
-    // Retorna a sessão de jogo pelo ID
-    public GameSession getGameSession(Long gameId) {
-        return getGame(gameId);
-    }
-
-    // Guarda a pontuação do jogador no ranking
-    public void saveScore(String nickname, int score) {
-        Score s = new Score();
-        s.setNickname(nickname);
-        s.setPoints(score);
-        scoreRepo.save(s);
-    }
-
     // --- Métodos auxiliares privados ---
 
     private GameSession getGame(Long id) {
@@ -233,7 +209,6 @@ public class GameService {
         }
     }
 
-    // Selecciona 5 perguntas aleatórias de cada nível directamente na BD (ORDER BY RANDOM())
     private String selectRandomQuestionIds() {
         List<Question> easy   = questionRepo.findRandomByDifficulty("EASY",   5);
         List<Question> medium = questionRepo.findRandomByDifficulty("MEDIUM", 5);
@@ -245,12 +220,10 @@ public class GameService {
         hard.forEach(q   -> ids.add(q.getId()));
 
         String csv = ids.stream().map(String::valueOf).collect(Collectors.joining(","));
-        System.out.println("IDs das perguntas seleccionadas: " + csv);
+        log.info("IDs das perguntas seleccionadas: {}", csv);
         return csv;
     }
 
-    // CORRIGIDO: carrega a pergunta activa directamente pelo ID guardado,
-    // em vez de re-fazer o shuffle. Usado pelas ajudas (50/50, audiência, amigo).
     private Question getCurrentQuestion(GameSession game) {
         if (game.getCurrentQuestionId() == null) {
             throw new RuntimeException("Nenhuma pergunta activa. Chame /question primeiro.");
@@ -271,7 +244,6 @@ public class GameService {
     private void nextQuestion(GameSession game) {
         game.setCurrentQuestionIndex(game.getCurrentQuestionIndex() + 1);
 
-        // Promove o nível a cada 5 perguntas correctas
         if (game.getCurrentQuestionIndex() == 5) {
             game.setCurrentLevel(DifficultyLevel.MEDIUM);
         } else if (game.getCurrentQuestionIndex() == 10) {
@@ -281,9 +253,6 @@ public class GameService {
         gameRepo.save(game);
     }
 
-    // CORRIGIDO: unificado num único método que sempre define o status correcto.
-    // Antes existia um finishGame(game) sem parâmetro que apenas colocava finished=true
-    // mas deixava o status como IN_PROCESS, o que impedia o timer de terminar o jogo.
     private void finishGame(GameSession game, boolean won) {
         game.setFinished(true);
         game.setStatus(won ? GameStatus.WON : GameStatus.LOST);
@@ -297,7 +266,6 @@ public class GameService {
                 .toList());
         java.util.Collections.shuffle(answers);
 
-        // Calcula o tempo restante com base no momento em que a pergunta foi enviada
         int timeRemaining = QUESTION_TIME_LIMIT_SECONDS;
         if (game.getQuestionStartTime() != null) {
             long elapsed = java.time.Duration.between(game.getQuestionStartTime(), LocalDateTime.now()).getSeconds();
